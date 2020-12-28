@@ -7,8 +7,8 @@ let noSwap=true;
         noSwap=true;
       for(let j=0;j<i-1;j++){
       
-        bars[j].style.backgroundColor = "#FF4949";
-        bars[j+1].style.backgroundColor = "#FF4949";
+        bars[j].style.backgroundColor = "#ECD150";
+        bars[j+1].style.backgroundColor = "#46C6F6";
 
         await new Promise(resolve =>
           setTimeout(() => {
@@ -23,21 +23,23 @@ let noSwap=true;
 
 
 
+
           await swap(j,j+1);
         
         }  
+        bars[j].style.backgroundColor = "#8E829B";
+        bars[j + 1].style.backgroundColor = "#8E829B";
 
-        bars[j].style.backgroundColor = "#58B7FF";
-        bars[j + 1].style.backgroundColor = "#58B7FF";
       }
-      console.log(bars[arr.length -k]);
-      bars[arr.length-k].style.backgroundColor = "#13CE66";
+      // console.log(bars[arr.length -k]);
+      bars[arr.length-k].style.backgroundColor = "#733761";
       if(noSwap){
         // have to visualize the bars which dont need swap in the end
         break;
       } 
       k++;
     }
+    enableClickEvent();
   }
 
   function swap(firstBar,secondBar){

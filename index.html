@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat+Alternates&display=swap" rel="stylesheet">    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Visualiser</title>
@@ -9,23 +11,26 @@
 <body>
     <nav>
         <div class="newarray">
-            <span class="spanclickable" id="generatenewarray">Generate new Array</span>
+            <span class="spanclickable hoverable" id="generatenewarray">Generate new Array</span>
         </div>
         <div class="sizeofarray">
-            <span>Change Array Size</span>
+            <div id='arrayUpdateDiv' class="changearraysize">Change Array Size</div>
+            <div class="slidecontainer">
+                <input type="range" min="50" max="100" step="5" value="50" class="slider" id="myRange">
+              </div>
         </div>
         <div class="algorithms">
             <ul class="algorithmslist">
-                <li><span class="spanclickable" id="Bubble">Bubble</span></li>
-                <li><span class="spanclickable" id="Merge">Merge</span></li>
-                <li><span class="spanclickable" id="Quick">Quick</span></li>
-                <li><span class="spanclickable" id="Heap">Heap</span></li>
+                <li><div class="spanclickable algos hoverable" id="Bubble">Bubble</div></li>
+                <li><div class="spanclickable algos hoverable" id="Merge">Merge</div></li>
+                <li><div class="spanclickable algos hoverable" id="Quick">Quick</div></li>
+                <li><div class="spanclickable algos hoverable" id="Heap">Heap</div></li>
             </ul>
 
         </div>
 
         <div class="sort">
-            <span class="spanclickable" id="spansort">Sort</span>
+            <span class="spanclickable hoverable" id="spansort">Sort</span>
         </div>
       
     </nav>
@@ -37,12 +42,11 @@
 
     </section>
 
-    <footer>
-        <div class="footer">Made By Harsh with ❤️</div>
-    </footer>
-
     <script src='app.js'></script>
     <script src='Algorithms/bubbleSort.js'></script>
+    <!-- <script src="Algorithms/heapSort.js"></script> -->
+    <!-- <script src="Algorithms/mergeSort.js"></script> -->
+      <script src="Algorithms/quickSort.js"></script>
     </body>
 </body>
 </html>

@@ -2,25 +2,30 @@
     margin: 0;
     box-sizing: border-box;
     padding:0;
+    font-family: 'Montserrat Alternates';
+    font-size: large;
+    color:white;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     height:15vh;
-    background-color: yellow;
+    background-color: #5f4769;
+
 }
 
 section{
-    height:75vh;
+    height:85vh;
     width:100%;
-    /* background-color: cadetblue; */
+    background-color:  rgba(228, 218, 218, 0.966);
 }
 
 footer{
-    height:10vh;
+    height:5vh;
     width: 100%;
-    background-color: rgb(2, 5, 20);
+    background-color: #5f4769;
+    display: flex;
 }
 
 .spanclickable{
@@ -28,19 +33,45 @@ footer{
 }
 
 .newarray{
- 
-    background-color: chartreuse;
     width:20%;
+    border-right: 1px solid white;
+    text-align: center;
+    position: relative;
 }
+
+.hoverable{
+    transition: all 0.2s ease-in-out;
+}
+
+.hoverable:hover{
+    transform: scale(1.15);
+}
+
+
+#generatenewarray{
+    position: absolute;
+    top:40px;
+    left:40px;
+
+}
+
 
 .algorithms{
     width: 30%;
-    background-color: brown;
+    border-right: 1px solid white;
+    position: relative;
 }
 .algorithmslist{
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    position: absolute;
+    top:40px;
+    left:40px;
+}
+
+.algos{
+    margin-right: 40px;
 }
 
 .visualizer{
@@ -48,23 +79,49 @@ footer{
     height:100%;
     display: flex;
     justify-content: center;
+    /* transform: rotate(180deg) scaleX(-1); */
 }
 
 #spansort{
     display: none;
+    position: absolute;
+    top:40px;
+    left:120px;
+    
 }
 
 .sort{
     width: 20%;
+    position: relative;
 }
 
 .sizeofarray{
     width: 30%;
+    border-right: 1px solid white;
+    position: relative;
 }
 
-.footer{
-    display: flex;
-    /* flex-direction: column; */
-    align-self: flex-end;
-    color:white;
+.changearraysize{
+    position: absolute;
+    left: 140px;
+    top:20px;
+}
+
+
+.slidecontainer{
+    position: absolute;
+    left: 150px;
+    top:60px;
+}
+
+
+.disable{
+    color:black;
+    pointer-events: none;
+    /* text-decoration: line-through; */
+}
+
+.selected{
+    color:pink;
+    text-decoration: underline;
 }
