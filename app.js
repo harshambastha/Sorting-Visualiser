@@ -22,7 +22,6 @@ function generateNewArray(arraySize){
         bar.childNodes[i].classList.add('blocks');
         bars[i].style=` background-color: #8E829B; margin-right:2px; width:7.25px; height:${newArray[i]}px`;
     }
-
 }
 
 
@@ -56,7 +55,9 @@ function enableClickEvent(){
 }
 
 al.addEventListener('click',selectSort);
-gna.addEventListener('click',generateNewArray);
+gna.addEventListener('click',()=>{
+    generateNewArray(arraySize);
+});
 window.onload=function(){
     generateNewArray(arraySize);
 }
